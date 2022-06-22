@@ -1,236 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .header > div {
+      }
 
-        .header{
-            display: flex;
-            justify-content: space-between;
-        }
-        .header>div{
-           
-        }
+      .left-group {
+        display: flex;
+      }
+      .left-group > img {
+        max-width: 100px;
+        max-height: 100px;
+        padding: 10px;
+      }
+      .left-group > h1 {
+        max-width: 230px;
+        color: rgb(82, 19, 19);
+      }
 
-        .left-group{
-            display: flex;
-        }
-        .left-group>img{
-            max-width: 100px;
-            max-height: 100px;
-            padding:10px;
-        }
-        .left-group>h1{
-            max-width: 230px;
-            color: rgb(82, 19, 19);
-        }
+      .right-group > div {
+        display: flex;
+      }
 
-        .right-group>div{
-            display: flex;
-        }
-        .right-group>div>div{
-            margin: auto;
-        }
-.right-group>div>div{
-    margin: auto;
-    text-align: center;
-    padding: 5px;
-}
+      .right-group > div > div {
+        margin: auto;
+        text-align: center;
+        padding: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
 
+      .lower-group {
+        background-color: yellow;
+        padding-left: 100px;
+        padding-top: 0;
+        padding-bottom: 0;
 
-.lower-group {
-    background-color: yellow;
-    padding: 20px;
-    border-top-left-radius: 30px
-}
-.upper-group >div{
-    margin: auto;
-}
-.about-head{
-    display: flex;
-}
-.about-head>div{
-    margin: auto; padding: 6px;
-}
+        border-top-left-radius: 30px;
+      }
 
-#about-hover{
- position: absolute;
-  top: 110px;
-    
-    width:500px ;
-    height: 300px;
-    padding: 20px;
-          box-shadow:
-             
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
-    
-    left: 450px;
-    align-self: center;
-    align-items: center;
-    
-}
-#about-hover >div{
-    position: relative;
-   
-   z-index: 3;
-}
+      .lower-group > div {
+        padding: 8px 20px;
+      }
 
+      .lower-group > div:hover {
+        background-color: rgb(107, 20, 20);
+      }
+      .lower-group > button {
+        background-color: blue;
+        color: white;
+        padding: 8px 20px;
+      }
 
-.about-body{
-    display: flex;
-}
-.about-body>div{
-    margin: auto;
-}
+      .upper-group > div {
+        margin: auto;
+      }
+      .about-head {
+        display: flex;
+      }
+      .about-head > div {
+        margin: auto;
+        padding: 6px;
+      }
 
-#award-hover{
-    display: none;
-    position: relative;
-    top: 1px;
-}
-#award-hover>div{
-    position: absolute;
-    padding: 20px;
-    left:40px;
-    width: 200px;
-    height: 50px;
+      #about-hover {
+        position: absolute;
+        top: 125px;
 
-    box-shadow:         
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+        width: 500px;
+        height: 300px;
+        padding: 20px;
+        box-shadow: 0 0 0 2px rgb(255, 255, 255),
+          0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 
-    padding: 2px;
-}
+        left: 450px;
+        align-self: center;
+        align-items: center;
+      }
+      #about-hover > div {
+        position: relative;
 
+        z-index: 3;
+      }
 
+      .about-body {
+        display: flex;
+      }
+      .about-body > div {
+        margin: auto;
+      }
+
+      #award-hover {
+        display: none;
+        position: relative;
+        top: 1px;
+      }
+      #award-hover > div {
+        position: absolute;
+        padding: 20px;
+        left: 40px;
+        width: 200px;
+        height: 50px;
+
+        box-shadow: 0 0 0 2px rgb(255, 255, 255),
+          0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+        padding: 2px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="header">
+      <div class="left-group">
+        <img
+          src="https://srisriuniversity.edu.in/wp-content/uploads/2021/09/SSU-LOGO.png"
+        />
 
-        <div class="left-group">
+        <h1>SRI SRI UNIVERSITY</h1>
+      </div>
 
-            <img src="https://srisriuniversity.edu.in/wp-content/uploads/2021/09/SSU-LOGO.png" />
-            
-            <h1>SRI SRI UNIVERSITY</h1>
+      <div class="right-group">
+        <div class="upper-group">
+          <div>STRUDENTS' CORNER</div>
+          <div>PLACEMENT</div>
+          <div>CAREERS</div>
+          <div>INCUBATION CENTRE</div>
+          <div>CONTACT US</div>
         </div>
+        <div class="lower-group">
+          <div
+            id="about"
+            onmouseover="changedisplayAbout()"
+            onmouseout="backAbout()"
+          >
+            ABOUT US
 
-        <div class="right-group">
-            <div class="upper-group ">
-                <div>STRUDENTS' CORNER</div>
-                <div>PLACEMENT</div>
-                <div>CAREERS</div>
-                <div>INCUBATION CENTRE</div>
-                <div>CONTACT US</div>
-
-            </div>
-            <div class="lower-group">
-                <div id="about" onmouseover="changedisplayAbout()" >ABOUT US
-                
-                    <div id="about-hover" onmouseleave="backAbout()">
-                        <div>
-                        <div class="about-head">
-                            <div>student</div>
-                            <div>govername</div>
-                
-                        </div>
-                
-                        <div class="about-body">
-                
-                
-                            <div>
-                
-                                <div>a</div>
-                                <div id="award" onmouseover="changedisplayAwards()" onmouseleave="backAwards()">
-                                   awards
-                                   <div id="award-hover">
-                
-                                    <div>
-                                    <div>b</div>
-                                    <div>c</div>
-                                    <div>d</div>
-                                    </div>
-                            
-                                </div>
-                                   
-                
-                                </div>
-                
-                
-                                <div>c</div>
-                                <div>d</div>
-                            </div>
-                
-                
-                
-                            <div>
-                                <div>a</div>
-                                <div>b</div>
-                                <div>c</div>
-                                <div>d</div>
-                                
-                            </div>
-                
-                
-                        </div>
-                
-                        </div>
-                
-                    
-                    
-                    </div>
-                
-                
+            <div id="about-hover">
+              <div>
+                <div class="about-head">
+                  <div>student</div>
+                  <div>govername</div>
                 </div>
 
+                <div class="about-body">
+                  <div>
+                    <div>a</div>
+                    <div
+                      id="award"
+                      onmouseover="changedisplayAwards()"
+                      onmouseleave="backAwards()"
+                    >
+                      awards
+                      <div id="award-hover">
+                        <div>
+                          <div>b</div>
+                          <div>c</div>
+                          <div>d</div>
+                        </div>
+                      </div>
+                    </div>
 
-                <div> ACADEMICS</div>
-                <div>ADMISSIONS</div>
-                <div>LIFE AT SSU</div>
-                <div>CONNECT</div>
-                <div>APPLYNOW<!/div>
+                    <div>c</div>
+                    <div>d</div>
+                  </div>
 
+                  <div>
+                    <div>a</div>
+                    <div>b</div>
+                    <div>c</div>
+                    <div>d</div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
 
+          <div>ACADEMICS</div>
+          <div>ADMISSIONS</div>
+          <div>LIFE AT SSU</div>
+          <div>CONNECT</div>
+          <button>APPLYNOW</button>
         </div>
-
+      </div>
     </div>
-
-
-
-    
-    
-
-
-
-    
-    
-</body>
+  </body>
 </html>
 <script>
+  function changedisplayAwards() {
+    document.getElementById("award-hover").style.display = "block";
+  }
 
+  function changedisplayAbout() {
+    document.getElementById("about-hover").style.display = "block";
+  }
 
-    function changedisplayAwards(){
-
-         document.getElementById('award-hover').style.display="block"
-
-    }
-
-
-    function changedisplayAbout(){
-        document.getElementById('about-hover').style.display="block"
-    }
-
-    function backAbout(){
-        document.getElementById('about-hover').style.display="none"
-    }
-    function backAwards(){
-        document.getElementById('award-hover').style.display="none"
-
-    }
+  function backAbout() {
+    document.getElementById("about-hover").style.display = "none";
+  }
+  function backAwards() {
+    document.getElementById("award-hover").style.display = "none";
+  }
 </script>
